@@ -1,0 +1,8 @@
+name: GHGChatManager
+version: 1.0
+authors: [rens4000, boykev]
+main: nl.gewoonhdgaming.ghgcm.Main
+commands:
+  cm:
+    description: Het algemene chat manager commando!
+    aliases: [chatmanager]
