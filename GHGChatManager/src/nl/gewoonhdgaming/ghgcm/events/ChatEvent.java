@@ -86,17 +86,16 @@ public class ChatEvent implements Listener {
 		}
 	}
 	
-//	@EventHandler
-//	public void highLight(AsyncPlayerChatEvent e) {
-//		Player p = e.getPlayer();
-//		for (String word : e.getMessage().split(" ")) {
-//			for(Player pl : Bukkit.getOnlinePlayers()) {
-//			if(word.equals(pl.getName())) {
-//				
-//				}
-//			}
-//		}
-//	}
+	@EventHandler
+	public void muted(AsyncPlayerChatEvent e) {
+		Player p = e.getPlayer();
+		if(ChatManagerUtils.muted.contains(p)) {
+			p.sendMessage(instance.prefix + "Je bent gemute door een stafflid. Mocht je vinden dat dit onterecht is,"
+					+ " kan je een bericht sturen naar het staffteam door /staff <bericht> te doen. Dit commando mag"
+					+ " niet misbruikt worden anders volgen er gevolgen!");
+			e.setCancelled(true);
+		}
+	}
 
 	@EventHandler
 	public void slowChat(AsyncPlayerChatEvent e) {

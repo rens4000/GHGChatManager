@@ -1,5 +1,6 @@
 package nl.gewoonhdgaming.ghgcm.utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -16,6 +17,8 @@ public class ChatManagerUtils {
 	public static boolean AdminChat = false;
 	
 	private static HashMap<UUID, Integer> COOLDOWN = new HashMap<>();
+	
+	public static ArrayList<UUID> muted = new ArrayList<>();
 
 	public static boolean slowChat = false;
 	
